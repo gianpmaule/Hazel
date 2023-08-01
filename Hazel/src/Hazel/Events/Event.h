@@ -2,9 +2,6 @@
 
 #include "Hazel/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Hazel {
 	//Eventos em Hazel são "blocking", ou seja, quando um evento ocorre,
 	//imediatamente é processado e tratado. Pode ser adicionado um buffer de eventos no futuro,
