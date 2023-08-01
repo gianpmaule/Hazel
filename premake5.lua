@@ -10,7 +10,7 @@ workspace "Hazel"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Hazel"
-	location "Hazel"
+	location "%{prj.name}"
 	kind "SharedLib"
 	language "C++"
 
@@ -23,7 +23,8 @@ project "Hazel"
 	}
 
 	includedirs {
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/src"
 	}
 
 	filter "system:windows"
@@ -53,7 +54,7 @@ project "Hazel"
 		optimize "On"
 
 project "Sandbox"
-	location "Sandbox"
+	location "%{prj.name}"
 	kind "ConsoleApp"
 	language "C++"
 
